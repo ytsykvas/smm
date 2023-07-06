@@ -15,7 +15,7 @@ uk:
   navbar:
     home: "Головна"
     message: "Повідомлення"
-    basket: "Корзина"
+    salary: "Виплати"
     projects: "Мої проекти"
     my_statistic: "Статистика"
     log_out: "Вийти"
@@ -24,7 +24,14 @@ uk:
     agency: "Агенція"
     partners: "Партнери"
     services: "Послуги"
+    vacancies: "Вакансії"
     language: "Мова"
+    admin:
+      projects: "Проекти"
+      employees: "Працівники"
+      salaries: "Зарплати"
+      board: "Дошка оголошень"
+      settings: "Налаштування"
   devise:
     confirmations:
       confirmed: "Вашу електронну адресу успішно підтверджено."

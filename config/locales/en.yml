@@ -15,7 +15,7 @@ en:
   navbar:
     home: "Home"
     message: "Message"
-    basket: "Basket"
+    salary: "Salary"
     projects: "My projects"
     my_statistic: "Statistic"
     log_out: "Log out"
@@ -24,7 +24,14 @@ en:
     agency: "Agency"
     partners: "Partners"
     services: "Services"
+    vacancies: "Vacancies"
     language: "Language"
+    admin:
+      projects: "Projects"
+      employees: "Employees"
+      salaries: "Salaries"
+      board: "Board"
+      settings: "Settings"
   devise:
     confirmations:
       confirmed: "Your email address has been successfully confirmed."

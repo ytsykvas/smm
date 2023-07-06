@@ -1,0 +1,9 @@
+.dropdown-menu.dropdown-menu-end aria-labelledby="navbarDropdown"
+  = link_to t('navbar.salary'), "#", class: "dropdown-item"
+  = link_to t('navbar.projects'), companies_path, class: "dropdown-item"
+  = link_to t('navbar.my_statistic'), "#", class: "dropdown-item"
+  = link_to t('navbar.admin.board'), "#", class: "dropdown-item"
+  form action="/users/sign_out" method="post"
+    input type="hidden" name="_method" value="delete"
+    input type="hidden" name="authenticity_token" value="#{form_authenticity_token}"
+    button.dropdown-item type="submit" onclick="return confirm('#{t('navbar.approve')}')" = t('navbar.log_out')
