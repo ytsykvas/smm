@@ -16,6 +16,7 @@ en:
     basket: "Basket"
     last_orders: "Last orders"
     log_out: "Log out"
+    log_in: "Log in"
     approve: "Are you sure?"
   devise:
     confirmations:

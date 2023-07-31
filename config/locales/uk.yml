@@ -16,6 +16,7 @@ uk:
     basket: "Корзина"
     last_orders: "Минулі замовлення"
     log_out: "Вийти"
+    log_in: "Війти"
     approve: "Ви впевнені?"
   devise:
     confirmations:

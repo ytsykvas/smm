@@ -25,4 +25,4 @@
                 button.dropdown-item type="submit" onclick="return confirm('#{t('navbar.approve')}')" = t('navbar.log_out')
         - else
           li.nav-item
-            = link_to "Login", new_user_session_path, class: "nav-link"
+            = link_to t('navbar.log_in'), new_user_session_path, class: "nav-link"
