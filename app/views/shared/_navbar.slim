@@ -9,11 +9,11 @@
     .collapse.navbar-collapse#navbarSupportedContent
       ul.navbar-nav.me-auto
         div.navbar-nav.me-center
-          = link_to "Агенція", root_path, class: "nav-link"
+          = link_to t('navbar.agency'), root_path, class: "nav-link"
           .me-2
-            = link_to "Партнери", root_path, class: "nav-link"
+            = link_to t('navbar.partners'), root_path, class: "nav-link"
           .me-2
-            = link_to "Ціни", root_path, class: "nav-link"
+            = link_to t('navbar.services'), root_path, class: "nav-link"
         - if user_signed_in?
           li.nav-item.active.me-2
             = link_to t('navbar.home'), root_path, class: "nav-link"
@@ -37,5 +37,5 @@ ul.navbar-nav.ms-auto.me-3
     a.nav-link.dropdown-toggle href="#" id="navbarDropdownLanguage" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false"
       = t('navbar.language')
     .dropdown-menu.dropdown-menu-end aria-labelledby="navbarDropdownLanguage"
-      = link_to "English", "#", class: "dropdown-item"
-      = link_to "Українська", "#", class: "dropdown-item"
+      = link_to "English", change_locale_to_en_path, method: :post, class: "dropdown-item"
+      = link_to "Українська", change_locale_to_uk_path, method: :post, class: "dropdown-item"
