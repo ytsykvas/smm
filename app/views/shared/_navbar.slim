@@ -10,19 +10,19 @@
       ul.navbar-nav.me-auto
         - if user_signed_in?
           li.nav-item.active
-            = link_to "Home", "#", class: "nav-link"
+            = link_to t('navbar.home'), root_path, class: "nav-link"
           li.nav-item
-            = link_to "Messages", "#", class: "nav-link"
+            = link_to t('navbar.message'), "#", class: "nav-link"
           li.nav-item.dropdown
             a.avatar href="#" id="navbarDropdown" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false"
               = image_tag "https://kitt.lewagon.com/placeholder/users/ssaunier", class: "avatar", alt: "dropdown menu"
             .dropdown-menu.dropdown-menu-end aria-labelledby="navbarDropdown"
-              = link_to "Action", "#", class: "dropdown-item"
-              = link_to "Another action", "#", class: "dropdown-item"
+              = link_to t('navbar.basket'), "#", class: "dropdown-item"
+              = link_to t('navbar.last_orders'), "#", class: "dropdown-item"
               form action="/users/sign_out" method="post"
                 input type="hidden" name="_method" value="delete"
                 input type="hidden" name="authenticity_token" value="#{form_authenticity_token}"
-                button type="submit" class="dropdown-item" onclick="return confirm('Ви впевнені, що хочете вийти?')" Log Out
+                button.dropdown-item type="submit" onclick="return confirm('#{t('navbar.approve')}')" = t('navbar.log_out')
         - else
           li.nav-item
             = link_to "Login", new_user_session_path, class: "nav-link"
