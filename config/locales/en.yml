@@ -14,13 +14,14 @@ en:
     home: "Home"
     message: "Message"
     basket: "Basket"
-    last_orders: "Last orders"
+    my_statistic: "Last orders"
     log_out: "Log out"
     log_in: "Log in"
     approve: "Are you sure?"
     agency: "Agency"
     partners: "Partners"
     services: "Services"
+    language: "Language"
   devise:
     confirmations:
       confirmed: "Your email address has been successfully confirmed."

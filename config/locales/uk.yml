@@ -14,13 +14,14 @@ uk:
     home: "Головна"
     message: "Повідомлення"
     basket: "Корзина"
-    last_orders: "Минулі замовлення"
+    my_statistic: "Минулі замовлення"
     log_out: "Вийти"
     log_in: "Війти"
     approve: "Ви впевнені?"
     agency: "Агенція"
     partners: "Партнери"
     services: "Послуги"
+    language: "Мова"
   devise:
     confirmations:
       confirmed: "Вашу електронну адресу успішно підтверджено."

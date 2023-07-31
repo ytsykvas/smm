@@ -24,7 +24,7 @@
               = image_tag "https://kitt.lewagon.com/placeholder/users/ssaunier", class: "avatar", alt: "dropdown menu"
             .dropdown-menu.dropdown-menu-end aria-labelledby="navbarDropdown"
               = link_to t('navbar.basket'), "#", class: "dropdown-item"
-              = link_to t('navbar.last_orders'), "#", class: "dropdown-item"
+              = link_to t('navbar.my_statistic'), "#", class: "dropdown-item"
               form action="/users/sign_out" method="post"
                 input type="hidden" name="_method" value="delete"
                 input type="hidden" name="authenticity_token" value="#{form_authenticity_token}"
