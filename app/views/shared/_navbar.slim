@@ -19,7 +19,10 @@
             .dropdown-menu.dropdown-menu-end aria-labelledby="navbarDropdown"
               = link_to "Action", "#", class: "dropdown-item"
               = link_to "Another action", "#", class: "dropdown-item"
-              = link_to "Log out", destroy_user_session_path, data: {turbo_method: :delete}, class: "dropdown-item"
+              form action="/users/sign_out" method="post"
+                input type="hidden" name="_method" value="delete"
+                input type="hidden" name="authenticity_token" value="#{form_authenticity_token}"
+                button type="submit" class="dropdown-item" onclick="return confirm('Ви впевнені, що хочете вийти?')" Log Out
         - else
           li.nav-item
             = link_to "Login", new_user_session_path, class: "nav-link"
