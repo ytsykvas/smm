@@ -18,6 +18,9 @@ uk:
     log_out: "Вийти"
     log_in: "Війти"
     approve: "Ви впевнені?"
+    agency: "Агенція"
+    partners: "Партнери"
+    services: "Послуги"
   devise:
     confirmations:
       confirmed: "Вашу електронну адресу успішно підтверджено."

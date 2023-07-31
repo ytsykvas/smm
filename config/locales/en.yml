@@ -18,6 +18,9 @@ en:
     log_out: "Log out"
     log_in: "Log in"
     approve: "Are you sure?"
+    agency: "Agency"
+    partners: "Partners"
+    services: "Services"
   devise:
     confirmations:
       confirmed: "Your email address has been successfully confirmed."
