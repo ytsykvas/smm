@@ -8,6 +8,10 @@
 
     .collapse.navbar-collapse#navbarSupportedContent
       ul.navbar-nav.me-auto
+        div.navbar-nav.me-center
+          = link_to "Агенція", root_path, class: "nav-link"
+          = link_to "Партнери", root_path, class: "nav-link"
+          = link_to "Ціни", root_path, class: "nav-link"
         - if user_signed_in?
           li.nav-item.active
             = link_to t('navbar.home'), root_path, class: "nav-link"
@@ -25,4 +29,4 @@
                 button.dropdown-item type="submit" onclick="return confirm('#{t('navbar.approve')}')" = t('navbar.log_out')
         - else
           li.nav-item
-            = link_to t('navbar.log_in'), new_user_session_path, class: "nav-link"
+            = link_to t('navbar.log_in'), new_user_session_path, class: "btn btn-outline-primary"
