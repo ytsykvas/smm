@@ -9,15 +9,17 @@
     .collapse.navbar-collapse#navbarSupportedContent
       ul.navbar-nav.me-auto
         div.navbar-nav.me-center
-          = link_to t('navbar.agency'), root_path, class: "nav-link"
+          = link_to "Агенція", root_path, class: "nav-link"
           .me-2
-            = link_to t('navbar.partners'), root_path, class: "nav-link"
+            = link_to "Партнери", root_path, class: "nav-link"
           .me-2
-            = link_to t('navbar.services'), root_path, class: "nav-link"
+            = link_to "Ціни", root_path, class: "nav-link"
         - if user_signed_in?
+          li.nav-item.active.me-2
+            = link_to t('navbar.home'), root_path, class: "nav-link"
           li.nav-item.me-2
             = link_to t('navbar.message'), "#", class: "btn btn-outline-primary"
-          li.nav-item.dropdown.me-2
+          li.nav-item.dropdown
             a.avatar href="#" id="navbarDropdown" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false"
               = image_tag "https://kitt.lewagon.com/placeholder/users/ssaunier", class: "avatar", alt: "dropdown menu"
             .dropdown-menu.dropdown-menu-end aria-labelledby="navbarDropdown"
@@ -30,3 +32,10 @@
         - else
           li.nav-item
             = link_to t('navbar.log_in'), new_user_session_path, class: "btn btn-outline-primary"
+ul.navbar-nav.ms-auto.me-3
+  li.nav-item.dropdown.ms-auto
+    a.nav-link.dropdown-toggle href="#" id="navbarDropdownLanguage" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false"
+      = t('navbar.language')
+    .dropdown-menu.dropdown-menu-end aria-labelledby="navbarDropdownLanguage"
+      = link_to "English", "#", class: "dropdown-item"
+      = link_to "Українська", "#", class: "dropdown-item"
