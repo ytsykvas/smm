@@ -58,6 +58,8 @@ group :development, :test do
   gem "debug", platforms: %i[ mri mingw x64_mingw ]
   gem "dotenv-rails"
   gem 'rubocop', require: false
+  gem 'rspec-rails', '~> 5.0'
+  gem 'cucumber-rails', '~> 2.1', require: false
 end
 
 group :development do
