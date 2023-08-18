@@ -58,8 +58,7 @@ group :development, :test do
   gem "debug", platforms: %i[ mri mingw x64_mingw ]
   gem "dotenv-rails"
   gem 'rubocop', require: false
-  gem 'rspec-rails', '~> 5.0'
-  gem 'cucumber-rails', '~> 2.1', require: false
+  gem 'webdrivers', '>= 4.8.0'
 end
 
 group :development do
@@ -75,7 +74,29 @@ end
 
 group :test do
   # Use system testing [https://guides.rubyonrails.org/testing.html#system-testing]
-  gem "capybara"
-  gem "selenium-webdriver"
-  gem "webdrivers"
+  gem 'capybara-selenium' # MIT-License
+  gem 'capybara-slow_finder_errors' # MIT-License
+  gem 'climate_control' # MIT-License
+  gem 'cucumber-rails', require: false # MIT-License
+  gem 'database_cleaner-active_record' # MIT-License
+  gem 'factory_bot_rails' # MIT-License
+  gem 'fake_ftp' # MIT-License
+  gem 'faker' # MIT-License
+  gem 'launchy' # For autoopening web pages in feature tests
+  gem "percy-capybara", "~> 5.0.0" # MIT-License
+  gem 'pundit-matchers' # MIT-License
+  gem 'rspec_junit_formatter' # MIT License
+  gem 'rspec-rails' # MIT-License
+  gem 'rspec-mocks' # MIT-License
+  gem 'rspec-expectations' # MIT-License
+  gem 'rspec-core' # MIT-License
+  gem 'rspec-support' # MIT-License
+  gem 'selenium-webdriver' # Adds support for Capybara system testing and selenium driver
+  gem 'shoulda-matchers' # Adds validation matchers - MIT License
+  gem 'simplecov' # MIT-License
+  gem 'simplecov-lcov' # MIT-License
+  gem 'spring-commands-rspec' # MIT-License
+  gem 'test-prof'
+  gem 'undercover' # MIT-License
+  gem 'webmock' # MIT-License
 end

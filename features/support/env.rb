@@ -3,8 +3,21 @@
 # newer version of cucumber-rails. Consider adding your own code to a new file
 # instead of editing this one. Cucumber will automatically load all features/**/*.rb
 # files.
-
+require "capybara/cucumber"
 require 'cucumber/rails'
+require 'capybara'
+require 'capybara/dsl'
+
+Capybara.default_driver = :selenium
+Capybara.app_host = "http://localhost:3000"
+
+Capybara.register_driver :chrome do |app|
+  Capybara::Selenium::Driver.new(app, browser: :chrome)
+end
+
+Capybara.default_driver = :chrome
+
+
 
 # frozen_string_literal: true
 
