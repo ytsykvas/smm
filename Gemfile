@@ -24,7 +24,6 @@ gem "stimulus-rails"
 
 # Build JSON APIs with ease [https://github.com/rails/jbuilder]
 gem "jbuilder"
-
 # Use Redis adapter to run Action Cable in production
 # gem "redis", "~> 4.0"
 
@@ -73,6 +72,7 @@ group :development do
 end
 
 group :test do
+  gem 'database_cleaner'
   # Use system testing [https://guides.rubyonrails.org/testing.html#system-testing]
   gem 'capybara-selenium' # MIT-License
   gem 'capybara-slow_finder_errors' # MIT-License
@@ -96,7 +96,6 @@ group :test do
   gem 'simplecov' # MIT-License
   gem 'simplecov-lcov' # MIT-License
   gem 'spring-commands-rspec' # MIT-License
-  gem 'test-prof'
   gem 'undercover' # MIT-License
   gem 'webmock' # MIT-License
 end

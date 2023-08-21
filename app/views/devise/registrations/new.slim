@@ -22,6 +22,8 @@ h2= t('devise.registrations.new.title')
             input_html: { autocomplete: 'new-password', "data-test-id": "password_confirmation-input"}
 
   .form-actions
-    = f.button :submit, t('devise.registrations.new.submit_button'), class: 'btn btn-primary'
+    = f.button :submit, t('devise.registrations.new.submit_button'),
+            class: 'btn btn-primary',
+            input_html: { "data-test-id": "submit_button", "data-disable-with": t('devise.registrations.new.submit_button') }
 
 = render 'devise/shared/links'
