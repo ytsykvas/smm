@@ -14,6 +14,7 @@ en:
     home: "Home"
     message: "Message"
     basket: "Basket"
+    projects: "My projects"
     my_statistic: "Statistic"
     log_out: "Log out"
     log_in: "Log in"
@@ -92,6 +93,22 @@ en:
       sign_up: "Sign up"
       forgot_password: "Forgot your password?"
       didnt_receive_confirmation: "Didn't receive confirmation instructions?"
+  company:
+    index_title: "All your projects are displayed here"
+    no_companies_title: "No project found for you"
+    new_company: "Create a new company"
+    cards:
+      services:
+        title: "What will it do?"
+        body: "This will allow you to track your account statistics, monitor indicators and always be up to date. And it will take 5 minutes."
+      statistic:
+        title: "How to get statistics of my projects?"
+        body: "Statistics are updated automatically and daily. You don't need to do anything for this. You can view them on the corresponding page."
+      help:
+        title: "How to contact a consultant?"
+        body: "If you have any difficulties, write to us and we will help."
+    create_new_company:
+      title: "Create new company"
   errors:
     messages:
       already_confirmed: "was already confirmed, please try signing in"

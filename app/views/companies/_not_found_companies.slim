@@ -1,0 +1,28 @@
+h1
+  = t('company.no_companies_title')
+= link_to t('company.new_company'), new_company_path, class: 'btn btn-primary'
+div.card-group.mt-5
+  div.card
+    = image_tag('company/create_new_company.jpg')
+    div.card-body
+      h3.card-title
+        = t('company.cards.services.title')
+      p.card-text
+        = t('company.cards.services.body')
+      = link_to t('navbar.services'), '#', class: 'btn btn-primary'
+  div.card
+    = image_tag('company/watch_statistic.jpg')
+    div.card-body
+      h3.card-title
+        = t('company.cards.statistic.title')
+      p.card-text
+        = t('company.cards.statistic.body')
+      = link_to t('navbar.my_statistic'), '#', class: 'btn btn-primary'
+  div.card
+    = image_tag('company/message_me.jpg')
+    div.card-body
+      h3.card-title
+        = t('company.cards.help.title')
+      p.card-text
+        = t('company.cards.help.body')
+      = link_to t('navbar.message'), '#', class: 'btn btn-primary'

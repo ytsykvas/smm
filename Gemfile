@@ -10,6 +10,7 @@ gem "rails", "~> 7.0.6"
 gem "sprockets-rails"
 
 gem "rails-i18n"
+
 # Use postgresql as the database for Active Record
 gem "pg", "~> 1.1"
 
