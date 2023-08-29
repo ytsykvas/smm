@@ -10,6 +10,8 @@ uk:
               blank: " - введіть бажаний пароль!"
             password_confirmation:
               confirmation: " - ви ввели різні паролі."
+  usefully:
+    submit_button: "Підтвердити"
   navbar:
     home: "Головна"
     message: "Повідомлення"
@@ -109,6 +111,11 @@ uk:
         body: "Якщо у вас виникли труднощі, напишіть нам й ми допоможемо."
     create_new_company:
       title: "Створити нову компанію"
+    created_successfully: "Компанія успішно створена"
+    new:
+      name: "Назва"
+      social: "Соціальна мережа"
+      information: "Примітка"
   errors:
     messages:
       already_confirmed: "вже підтверджено, спробуйте увійти"

@@ -7,9 +7,14 @@ class CompaniesController < ApplicationController
   end
 
   def new
+    @company = Company.new
+    @collection = Social.all.pluck(:name)
   end
 
   def create
+    Company::CreateCompany.new(params, current_user).create_company
+
+    redirect_to root_path, notice: t('company.created_successfully')
   end
 
   def destroy

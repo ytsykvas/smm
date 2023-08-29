@@ -10,6 +10,8 @@ en:
               blank: " - enter your new password!"
             password_confirmation:
               confirmation: " - you enter different passwords."
+  usefully:
+    submit_button: "Submit"
   navbar:
     home: "Home"
     message: "Message"
@@ -109,6 +111,11 @@ en:
         body: "If you have any difficulties, write to us and we will help."
     create_new_company:
       title: "Create new company"
+    created_successfully: "Company was created successfully"
+    new:
+      name: "Name"
+      social: "Social network"
+      information: "Notice"
   errors:
     messages:
       already_confirmed: "was already confirmed, please try signing in"
