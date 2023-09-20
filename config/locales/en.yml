@@ -111,7 +111,12 @@ en:
         body: "If you have any difficulties, write to us and we will help."
     create_new_company:
       title: "Create new company"
+    edit_company:
+      title: "Edit company %{name}"
     created_successfully: "Company was created successfully"
+    creation_failed: "Company creation is failed"
+    update_failed: "We can not save changes"
+    updated_successfully: "Updated successfully"
     new:
       name: "Name"
       social: "Social network"

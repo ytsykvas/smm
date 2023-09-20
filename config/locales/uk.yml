@@ -111,7 +111,12 @@ uk:
         body: "Якщо у вас виникли труднощі, напишіть нам й ми допоможемо."
     create_new_company:
       title: "Створити нову компанію"
+    edit_company:
+      title: "Редагувати компанію %{name}"
     created_successfully: "Компанія успішно створена"
+    creation_failed: "Компанія не створена"
+    update_failed: "Не можемо зберегти зміни"
+    updated_successfully: "Успішно оновлено компанію"
     new:
       name: "Назва"
       social: "Соціальна мережа"
