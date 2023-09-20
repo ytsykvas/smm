@@ -1,7 +1,7 @@
 h2
   = t('company.create_new_company.title')
 = simple_form_for @company do |f|
-  = f.input :name, label: t('company.new.name'), class: 'text-field'
-  = f.input :social_id, collection: @collection, label: t('company.new.social')
+  = f.input :name, label: t('company.new.name'), class: 'text-field', required: true
+  = f.input :social_id, collection: Social.all, label: t('company.new.social'), required: true
   = f.input :information, label: t('company.new.information')
   = f.button :submit , t('usefully.submit_button'), class: 'btn btn-primary'

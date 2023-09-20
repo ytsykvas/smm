@@ -59,6 +59,7 @@ group :development, :test do
   gem "dotenv-rails"
   gem 'rubocop', require: false
   gem 'webdrivers', '>= 4.8.0'
+  gem 'database_cleaner'
 end
 
 group :development do

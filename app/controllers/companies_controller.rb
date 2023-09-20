@@ -8,15 +8,41 @@ class CompaniesController < ApplicationController
 
   def new
     @company = Company.new
-    @collection = Social.all.pluck(:name)
+  end
+
+  def edit
+    company(params[:id])
+  end
+
+  def update
+    company(params[:id])
+    if @company.update(company_params)
+      redirect_to companies_path, notice: t('company.updated_successfully')
+    else
+      render :edit
+    end
   end
 
   def create
-    Company::CreateCompany.new(params, current_user).create_company
-
-    redirect_to root_path, notice: t('company.created_successfully')
+    create_service = Company::CreateCompany.new(params: params, user: current_user)
+    if create_service.perform
+      redirect_to companies_path, notice: t('company.created_successfully')
+    else
+      @company = create_service.company
+      render :new
+    end
   end
 
   def destroy
+  end
+
+  private
+
+  def company_params
+    params.require(:company).permit(:name, :social_id, :information, :started_at)
+  end
+
+  def company(id)
+    @company ||= Company.find(id)
   end
 end

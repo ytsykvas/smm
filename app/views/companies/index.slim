@@ -4,5 +4,27 @@
   h1
     = t('company.index_title')
   = link_to t('company.create_new_company.title'), new_company_path, class: 'btn btn-primary'
+  table.table.table-bordered.table-hover
+    thead
+      tr
+        th # ID
+        th Назва
+        th Соц.мережа
+        th Початок
+        th Активна
+        th Дії
+    tbody
+      - @companies.each do |company|
+        tr
+          td = company.id
+          td = company.name
+          td = Social.find(company.social_id).name
+          td = company.started_at.strftime("%d %B %Y")
+          td = company.active ? 'Так' : 'Ні'
+          td
+            = link_to 'Редагувати', edit_company_path(company), class: 'btn btn-primary btn-sm'
+            = link_to 'Статистика', "#", class: 'btn btn-dark btn-sm'
+            = link_to 'Завдання', "#", class: 'btn btn-danger btn-sm'
+
 
 
