@@ -6,17 +6,9 @@ class User < ApplicationRecord
 
   has_many :companies
 
-  validates :user_type, presence: true, inclusion: { in: %w(employee manager admin) }
+  validates :user_type, presence: true, inclusion: { in: %w[employee manager admin regular] }
 
-  def make_employee
-    update(user_type: 'employee')
-  end
-
-  def make_manager
-    update(user_type: 'manager')
-  end
-
-  def make_admin
-    update(user_type: 'admin')
+  def change_user_type(user_type)
+    update(user_type:) if %w[employee manager admin regular].include?(user_type)
   end
 end

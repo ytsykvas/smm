@@ -32,6 +32,12 @@ uk:
       salaries: "Зарплати"
       board: "Дошка оголошень"
       settings: "Налаштування"
+    regular:
+      question: "Запитання експерту"
+      finance: "Мої фінанси"
+      projects: "Проекти"
+      board: "Дошка оголошень"
+      settings: "Налаштування"
   devise:
     confirmations:
       confirmed: "Вашу електронну адресу успішно підтверджено."

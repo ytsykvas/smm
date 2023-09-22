@@ -32,6 +32,12 @@ en:
       salaries: "Salaries"
       board: "Board"
       settings: "Settings"
+    regular:
+      question: "Ask a question"
+      finance: "My finances"
+      projects: "Projects"
+      board: "Board"
+      settings: "Settings"
   devise:
     confirmations:
       confirmed: "Your email address has been successfully confirmed."

@@ -29,6 +29,8 @@
               = render 'shared/profile_dropdown/manager_dropdown'
             - when 'admin'
               = render 'shared/profile_dropdown/admin_dropdown'
+            - when 'regular'
+              = render 'shared/profile_dropdown/regular_dropdown'
         - else
           li.nav-item
             = link_to t('navbar.log_in'), new_user_session_path, class: "btn btn-outline-primary"
