@@ -28,8 +28,10 @@ en:
     language: "Language"
     admin:
       projects: "Projects"
+      teams: "Teams"
       employees: "Employees"
       salaries: "Salaries"
+      finances: "Finances"
       board: "Board"
       settings: "Settings"
     regular:
@@ -37,6 +39,22 @@ en:
       finance: "My finances"
       projects: "Projects"
       board: "Board"
+      settings: "Settings"
+    manager:
+      projects: "Projects"
+      statistic: "Statistic"
+      teams: "Teams"
+      tasks: "Tasks"
+      board: "Board"
+      salary: "Salary"
+      settings: "Settings"
+    employee:
+      projects: "Projects"
+      statistic: "Statistic"
+      my_team: "My team"
+      my_tasks: "My tasks"
+      board: "Board"
+      finances: "Salary"
       settings: "Settings"
   devise:
     confirmations:

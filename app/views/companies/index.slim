@@ -19,7 +19,7 @@
           td = company.id
           td = company.name
           td = Social.find(company.social_id).name
-          td = company.started_at.strftime("%d %B %Y")
+          td = company.started_at&.strftime("%d %B %Y")
           td = company.active ? 'Так' : 'Ні'
           td
             = link_to 'Редагувати', edit_company_path(company), class: 'btn btn-primary btn-sm'

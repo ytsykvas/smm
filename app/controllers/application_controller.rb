@@ -1,4 +1,5 @@
 class ApplicationController < ActionController::Base
+  include Pundit
   def change_locale_to_en
     I18n.default_locale = :en
 

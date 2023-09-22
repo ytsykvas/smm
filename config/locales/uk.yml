@@ -28,8 +28,10 @@ uk:
     language: "Мова"
     admin:
       projects: "Проекти"
+      teams: "Команди"
       employees: "Працівники"
       salaries: "Зарплати"
+      finances: "Фінанси"
       board: "Дошка оголошень"
       settings: "Налаштування"
     regular:
@@ -37,6 +39,22 @@ uk:
       finance: "Мої фінанси"
       projects: "Проекти"
       board: "Дошка оголошень"
+      settings: "Налаштування"
+    manager:
+      projects: "Проекти"
+      statistic: "Статистика"
+      teams: "Команди"
+      tasks: "Завдання"
+      board: "Дошка оголошень"
+      salary: "Зарплати"
+      settings: "Налаштування"
+    employee:
+      projects: "Проекти"
+      statistic: "Статистика"
+      my_team: "Моя команда"
+      my_tasks: "Мої завдання"
+      board: "Дошка оголошень"
+      finances: "Фінанси"
       settings: "Налаштування"
   devise:
     confirmations:
