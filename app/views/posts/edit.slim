@@ -1,0 +1,8 @@
+h1 = t('posts.edit_post')
+
+= simple_form_for @find_post do |f|
+  = f.input :title, required: true
+  = f.input :body, as: :text, required: true
+  = f.input :image, as: :file
+
+  = f.button :submit, class: 'btn btn-primary'

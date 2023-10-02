@@ -15,7 +15,7 @@
           .me-2
             = link_to t('navbar.services'), "#", class: "nav-link"
           .me-2
-            = link_to t('navbar.vacancies'), "#", class: "nav-link"
+            = link_to t('navbar.vacancies'), careers_path, class: "nav-link"
         - if user_signed_in?
           li.nav-item.me-2
             = link_to t('navbar.message'), "#", class: "btn btn-outline-primary"

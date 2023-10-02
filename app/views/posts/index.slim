@@ -1,9 +1,16 @@
 h1
   = t('posts.index_title')
 = link_to t('posts.new_post_button'), new_post_path, class: 'btn btn-success'
-- @posts.each do |post|
-  .border.p-5.mt-3
-    h2 = post.title
-    h4 = post.body
-    p = "(#{post.created_at.to_date})"
-    = link_to t('posts.open_post'), post_path(post.id), class: 'btn btn-primary'
+- if @posts.blank?
+  h4.mt-5 = t('posts.no_posts')
+- else
+  - @posts.each do |post|
+    .border.p-5.mt-3
+      h2 = post.title
+      = image_tag post.image.url, alt: post.title if post.image.attached?
+      h4.mt-3 = post.body
+      p
+        = "(#{post.created_at.to_date})"
+        - if post.user&.email
+          = " - #{post.user.email}"
+      = link_to t('posts.open_post'), post_path(post), class: 'btn btn-primary'

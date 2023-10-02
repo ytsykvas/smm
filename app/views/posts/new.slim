@@ -1,0 +1,6 @@
+h1 = t('posts.new_post_button')
+= simple_form_for @post do |f|
+  = f.input :title, required: true
+  = f.input :body, as: :text, required: true
+  = f.input :image, as: :file
+  = f.button :submit, class: 'btn btn-primary'
