@@ -126,6 +126,16 @@ uk:
       sign_up: "Зареєструватсь"
       forgot_password: "Забули пароль?"
       didnt_receive_confirmation: "Не отримали інструкцій по відновленні?"
+  errors:
+    messages:
+      already_confirmed: "вже підтверджено, спробуйте увійти"
+      confirmation_period_expired: "повинно бути підтверджено протягом %{period}, будь ласка, знову запросіть"
+      expired: "вийшов з дії, будь ласка, знову запросіть"
+      not_found: "не знайдено"
+      not_locked: "не було заблоковано"
+      not_saved:
+        one: "1 помилка заборонила збереження цього %{resource}:"
+        other: "%{count} помилки заборонили збереження цього %{resource}:"
   company:
     index_title: "Тут відображаються всі Ваші проекти"
     no_companies_title: "У вас не знайдено жодного проекту"
@@ -152,13 +162,10 @@ uk:
       name: "Назва"
       social: "Соціальна мережа"
       information: "Примітка"
-  errors:
-    messages:
-      already_confirmed: "вже підтверджено, спробуйте увійти"
-      confirmation_period_expired: "повинно бути підтверджено протягом %{period}, будь ласка, знову запросіть"
-      expired: "вийшов з дії, будь ласка, знову запросіть"
-      not_found: "не знайдено"
-      not_locked: "не було заблоковано"
-      not_saved:
-        one: "1 помилка заборонила збереження цього %{resource}:"
-        other: "%{count} помилки заборонили збереження цього %{resource}:"
+  posts:
+    index_title: "Всі оголошення"
+    new_post_button: "Створити нове"
+    open_post: "Відкрити"
+    edit_post: "Редагувати"
+    delete_post: "Видалити"
+    deleting_confirmation: "Ви впевнені, що хочете видалити цей запис?"

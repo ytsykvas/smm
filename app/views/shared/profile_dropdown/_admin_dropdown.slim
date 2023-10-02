@@ -4,7 +4,7 @@
   = link_to t('navbar.admin.employees'), "#", class: "dropdown-item"
   = link_to t('navbar.admin.salaries'), "#", class: "dropdown-item"
   = link_to t('navbar.admin.finances'), "#", class: "dropdown-item"
-  = link_to t('navbar.admin.board'), "#", class: "dropdown-item"
+  = link_to t('navbar.admin.board'), posts_path, class: "dropdown-item"
   = link_to t('navbar.admin.settings'), "#", class: "dropdown-item"
   form action="/users/sign_out" method="post"
     input type="hidden" name="_method" value="delete"

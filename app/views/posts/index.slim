@@ -1,0 +1,9 @@
+h1
+  = t('posts.index_title')
+= link_to t('posts.new_post_button'), new_post_path, class: 'btn btn-success'
+- @posts.each do |post|
+  .border.p-5.mt-3
+    h2 = post.title
+    h4 = post.body
+    p = "(#{post.created_at.to_date})"
+    = link_to t('posts.open_post'), post_path(post.id), class: 'btn btn-primary'

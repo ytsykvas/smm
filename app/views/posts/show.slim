@@ -1,0 +1,6 @@
+h1 = @find_post.title
+h4 = @find_post.body
+p = "(#{@find_post.created_at.to_date})"
+- if @allowed_users.include?(current_user.user_type)
+  = link_to t('posts.edit_post'), edit_post_path, class: 'btn btn-primary', style: 'margin-right: 10px;'
+  button.btn.btn-danger type="submit" onclick='return confirm("#{t('posts.delete_post')}")' #{t('posts.delete_post')}

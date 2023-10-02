@@ -126,6 +126,16 @@ en:
       sign_up: "Sign up"
       forgot_password: "Forgot your password?"
       didnt_receive_confirmation: "Didn't receive confirmation instructions?"
+  errors:
+    messages:
+      already_confirmed: "was already confirmed, please try signing in"
+      confirmation_period_expired: "needs to be confirmed within %{period}, please request a new one"
+      expired: "has expired, please request a new one"
+      not_found: "not found"
+      not_locked: "was not locked"
+      not_saved:
+        one: "1 error prohibited this %{resource} from being saved:"
+        other: "%{count} errors prohibited this %{resource} from being saved:"
   company:
     index_title: "All your projects are displayed here"
     no_companies_title: "No project found for you"
@@ -152,14 +162,12 @@ en:
       name: "Name"
       social: "Social network"
       information: "Notice"
-  errors:
-    messages:
-      already_confirmed: "was already confirmed, please try signing in"
-      confirmation_period_expired: "needs to be confirmed within %{period}, please request a new one"
-      expired: "has expired, please request a new one"
-      not_found: "not found"
-      not_locked: "was not locked"
-      not_saved:
-        one: "1 error prohibited this %{resource} from being saved:"
-        other: "%{count} errors prohibited this %{resource} from being saved:"
+  posts:
+    index_title: "All announcements"
+    new_post_button: "Create new"
+    open_post: "Open"
+    edit_post: "Edit"
+    delete_post: "Delete"
+    deleting_confirmation: "Are you sure you want to delete this entry?"
+
 
