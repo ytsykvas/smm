@@ -3,7 +3,6 @@ class CreatePositions < ActiveRecord::Migration[7.0]
     create_table :positions do |t|
       t.text :title
       t.text :body
-      t.text :technologies, array: true, default: []
       t.string :status, default: 'open'
       t.date :closing_date, default: nil
 

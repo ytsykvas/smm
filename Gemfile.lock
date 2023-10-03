@@ -103,7 +103,6 @@ GEM
       selenium-webdriver
     capybara-slow_finder_errors (0.1.5)
       capybara (~> 3.0)
-    climate_control (1.2.0)
     concurrent-ruby (1.2.2)
     crack (0.4.5)
       rexml
@@ -169,7 +168,6 @@ GEM
     factory_bot_rails (6.2.0)
       factory_bot (~> 6.2.0)
       railties (>= 5.0.0)
-    fake_ftp (0.3.0)
     faker (3.2.1)
       i18n (>= 1.8.11, < 2)
     ffi (1.15.5)
@@ -193,8 +191,6 @@ GEM
       activesupport (>= 5.0.0)
     json (2.6.3)
     language_server-protocol (3.17.0.3)
-    launchy (2.5.2)
-      addressable (~> 2.8)
     loofah (2.21.3)
       crass (~> 1.0.2)
       nokogiri (>= 1.12.0)
@@ -230,8 +226,6 @@ GEM
     parser (3.2.2.3)
       ast (~> 2.4.1)
       racc
-    percy-capybara (5.0.0)
-      capybara (>= 3)
     pg (1.5.3)
     popper_js (2.11.8)
     public_suffix (5.0.3)
@@ -239,11 +233,6 @@ GEM
       nio4r (~> 2.0)
     pundit (2.2.0)
       activesupport (>= 3.0.0)
-    pundit-matchers (3.1.2)
-      rspec-core (~> 3.12)
-      rspec-expectations (~> 3.12)
-      rspec-mocks (~> 3.12)
-      rspec-support (~> 3.12)
     racc (1.7.1)
     rack (2.2.8)
     rack-test (2.1.0)
@@ -305,8 +294,6 @@ GEM
       rspec-mocks (~> 3.12)
       rspec-support (~> 3.12)
     rspec-support (3.12.1)
-    rspec_junit_formatter (0.6.0)
-      rspec-core (>= 2, < 4, != 2.12.0)
     rubocop (1.56.0)
       base64 (~> 0.1.1)
       json (~> 2.3)
@@ -410,7 +397,6 @@ DEPENDENCIES
   bootstrap (~> 5.2)
   capybara-selenium
   capybara-slow_finder_errors
-  climate_control
   cucumber-rails
   database_cleaner
   database_cleaner-active_record
@@ -418,25 +404,18 @@ DEPENDENCIES
   devise
   dotenv-rails
   factory_bot_rails
-  fake_ftp
   faker
   font-awesome-sass (~> 6.1)
   importmap-rails
   jbuilder
-  launchy
-  percy-capybara (~> 5.0.0)
   pg (~> 1.1)
   puma (~> 5.0)
   pundit
-  pundit-matchers
   rails (~> 7.0.6)
   rails-i18n
   rspec-core
-  rspec-expectations
   rspec-mocks
   rspec-rails
-  rspec-support
-  rspec_junit_formatter
   rubocop
   sassc-rails
   selenium-webdriver

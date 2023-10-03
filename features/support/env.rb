@@ -9,7 +9,6 @@ require 'capybara'
 require 'capybara/dsl'
 
 Capybara.default_driver = :selenium
-Capybara.app_host = "http://localhost:3000"
 
 Capybara.register_driver :chrome do |app|
   Capybara::Selenium::Driver.new(app, browser: :chrome)
@@ -71,3 +70,17 @@ end
 # See https://github.com/cucumber/cucumber-rails/blob/master/features/choose_javascript_database_strategy.feature
 Cucumber::Rails::Database.javascript_strategy = :truncation
 
+Cucumber::Rails::Database.autorun_database_cleaner = false
+DatabaseCleaner.strategy = :truncation
+
+Before do
+  DatabaseCleaner.clean
+end
+
+# config.before(:each) do
+#   DatabaseCleaner.start
+# end
+#
+# config.after(:each) do
+#   DatabaseCleaner.clean
+# end

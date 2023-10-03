@@ -5,6 +5,7 @@ Rails.application.routes.draw do
   resources :companies
   resources :posts
   resources :careers
+  resources :positions
 
   delete '/posts/:id', to: 'posts#destroy', as: :delete_post
   get '/change_locale_to_en', to: 'application#change_locale_to_en', as: :change_locale_to_en

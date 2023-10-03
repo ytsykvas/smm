@@ -10,9 +10,13 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2023_10_03_132647) do
+ActiveRecord::Schema[7.0].define(version: 2023_10_03_164124) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  # Custom types defined in this database.
+  # Note that some types may not work with other database engines. Be careful if changing database.
+  create_enum "position_status", ["open", "closed"]
 
   create_table "active_storage_attachments", force: :cascade do |t|
     t.string "name", null: false
@@ -66,11 +70,18 @@ ActiveRecord::Schema[7.0].define(version: 2023_10_03_132647) do
   create_table "positions", force: :cascade do |t|
     t.text "title"
     t.text "body"
-    t.text "technologies", default: [], array: true
-    t.string "status", default: "open"
     t.date "closing_date"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.integer "experience"
+    t.string "status", default: "open"
+  end
+
+  create_table "positions_technologies", id: false, force: :cascade do |t|
+    t.bigint "position_id", null: false
+    t.bigint "technology_id", null: false
+    t.index ["position_id", "technology_id"], name: "index_positions_technologies_on_position_id_and_technology_id"
+    t.index ["technology_id", "position_id"], name: "index_positions_technologies_on_technology_id_and_position_id"
   end
 
   create_table "posts", force: :cascade do |t|
@@ -84,6 +95,12 @@ ActiveRecord::Schema[7.0].define(version: 2023_10_03_132647) do
   end
 
   create_table "socials", force: :cascade do |t|
+    t.string "name"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "technologies", force: :cascade do |t|
     t.string "name"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
