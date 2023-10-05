@@ -71,9 +71,7 @@ Feature: Different user types have different user dropdowns
     And I should see the text: careers
     And I should see the text: message
     And I click on the avatar button
-    And I should see the text: regular ask question
-    And I should see the text: regular finances
-    And I should see the text: projects
-    And I should see the text: projects
+    And I should see the text: ask question
+    And I should see the text: calculate
     And I should see the text: settings
     And I should see the text: log out

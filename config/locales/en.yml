@@ -37,7 +37,7 @@ en:
     regular:
       question: "Ask a question"
       finance: "My finances"
-      projects: "Projects"
+      calculate: "Calculate your project"
       board: "Board"
       settings: "Settings"
     manager:

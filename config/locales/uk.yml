@@ -37,8 +37,7 @@ uk:
     regular:
       question: "Запитання експерту"
       finance: "Мої фінанси"
-      projects: "Проекти"
-      board: "Дошка оголошень"
+      calculate: "Порахувати вартість"
       settings: "Налаштування"
     manager:
       projects: "Проекти"

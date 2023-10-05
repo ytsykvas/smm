@@ -34,8 +34,8 @@ Then (/(After waiting max (\d*) seconds )?I (should see|should not see) the text
     'employee salary': 'navbar.employee.finances',
     'employee my team': 'navbar.employee.my_team',
     'employee my tasks': 'navbar.employee.my_tasks',
-    'regular ask question': 'navbar.regular.question',
-    'regular finances': 'navbar.regular.finance'
+    'ask question': 'navbar.regular.question',
+    'calculate': 'navbar.regular.calculate'
   }.stringify_keys
   text = I18n.t(hash_of_i18n_keys.fetch(key))
   wait ||= Capybara.default_max_wait_time
