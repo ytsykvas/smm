@@ -4,11 +4,15 @@ h2
   .form-inputs
     = f.input :email, required: false, autofocus: true,
             label: t('devise.sessions.email'),
-            input_html: { autocomplete: "email", placeholder: "example@gmail.com" },
+            input_html: { autocomplete: "email",
+                    placeholder: "example@gmail.com",
+                    "data-test-id": "email-input" },
             class: "form-control"
     = f.input :password, required: false,
             label: t('devise.sessions.password'),
-            input_html: { autocomplete: "current-password", placeholder: t('devise.registrations.new.six_or_more') },
+            input_html: { autocomplete: "current-password",
+                    placeholder: t('devise.registrations.new.six_or_more'),
+                    "data-test-id": "password-input" },
             class: "form-control"
     - if devise_mapping.rememberable?
       = f.input :remember_me, as: :boolean

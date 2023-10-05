@@ -21,10 +21,15 @@ When(/I fill "(.*?)" in the (.*?) field/) do |text, field_test_id|
 end
 
 When (/I click on the (.*?) (link|button)/) do |test_id, type|
-  link_test_id = {}
-  button_test_id = {
-    'submit': 'submit_button'
+  link_test_id = {
+    # dashboard
   }
+  button_test_id = {
+    'submit': 'submit_button',
+    # dashboard
+    'avatar': 'avatar_picture',
+    'sign out': 'log_out_button'
+  }.stringify_keys
   object = case type
            when "link"
              link_test_id[test_id.downcase]
@@ -38,12 +43,4 @@ end
 
 When(/^I submit the form$/) do
   find('input[type="submit"]').click
-end
-
-Before('@selenium') do
-  DatabaseCleaner.strategy = :truncation # Встановлення стратегії очищення для драйвера :selenium
-end
-
-After('@selenium') do
-  DatabaseCleaner.clean # Очищення бази даних після виконання тесту з драйвером :selenium
 end

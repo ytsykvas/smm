@@ -21,7 +21,10 @@
             = link_to t('navbar.message'), "#", class: "btn btn-outline-primary"
           li.nav-item.dropdown
             a.avatar href="#" id="navbarDropdown" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false"
-              = image_tag "https://icon-library.com/images/profile_icon_png_1113474.png", class: "avatar", alt: "dropdown menu"
+              = image_tag "https://icon-library.com/images/profile_icon_png_1113474.png",
+                      class: "avatar",
+                      alt: "dropdown menu",
+                      data: { test_id: "avatar_picture" }
             - case current_user.user_type
             - when 'employee'
               = render 'shared/profile_dropdown/employee_dropdown'

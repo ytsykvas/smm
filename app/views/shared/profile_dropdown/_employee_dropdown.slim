@@ -9,4 +9,5 @@
   form action="/users/sign_out" method="post"
     input type="hidden" name="_method" value="delete"
     input type="hidden" name="authenticity_token" value="#{form_authenticity_token}"
-    button.dropdown-item type="submit" onclick="return confirm('#{t('navbar.approve')}')" = t('navbar.log_out')
+    button.dropdown-item type="submit" onclick="return confirm('#{t('navbar.approve')}')" data-test-id="log_out_button"
+      = t('navbar.log_out')
