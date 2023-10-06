@@ -34,7 +34,8 @@ class PostsController < ApplicationController
     if find_post.update(post_params)
       redirect_to post_path(@find_post), notice: t('posts.post_is_updated')
     else
-      render :edit, notice: t('posts.check_your_data')
+      flash.now[:alert] = t('posts.check_your_data')
+      render :edit
     end
   end
 
@@ -54,6 +55,6 @@ class PostsController < ApplicationController
   end
 
   def set_active_storage_host
-    ActiveStorage::Current.host = request.base_url
+    ActiveStorage::Current.url_options = { host: request.base_url }
   end
 end

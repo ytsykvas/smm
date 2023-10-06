@@ -1,5 +1,5 @@
 class ApplicationController < ActionController::Base
-  include Pundit
+  include Pundit::Authorization
   def change_locale_to_en
     I18n.default_locale = :en
 

@@ -7,9 +7,6 @@ class CareersController < ApplicationController
     @position = Position.new
   end
 
-  def show
-  end
-
   def create
     @position = Position.new(position_params)
     if @position.save
@@ -17,9 +14,6 @@ class CareersController < ApplicationController
     else
       render :new
     end
-  end
-
-  def destroy
   end
 
   private

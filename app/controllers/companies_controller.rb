@@ -3,9 +3,6 @@ class CompaniesController < ApplicationController
     @companies = policy_scope(Company)
   end
 
-  def show
-  end
-
   def new
     @company = Company.new
   end
