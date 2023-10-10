@@ -9,7 +9,6 @@ class Post::CreatePost < ServiceBase
 
   def perform
     build_post
-    false unless validate_post
     save_post
   end
 
@@ -18,10 +17,6 @@ class Post::CreatePost < ServiceBase
   def build_post
     @post = Post.new(@params.require(:post).permit(:title, :body, :image))
     @post.user = user
-  end
-
-  def validate_post
-    @post.valid?
   end
 
   def save_post
