@@ -7,12 +7,15 @@
 - else
   h1.mt-3 = 'We are hiring!'
   - @open_positions.each do |position|
-    .border.p-5.mt-3
-      h4 = position.title
-      p = "Experience (years in this field): #{position.experience}+"
-      - if position.technologies.blank?
-        p = 'Don`t need any skills'
-      - else
-        p = "Technologies: #{position.technologies.map { |tech| tech.name }.split(',').join(', ')}"
-      p = "Опубліковано - #{position.created_at.to_date}. Відгукнулось #{position.replies}"
-      = link_to "Show more", position_path(position), class: 'btn btn-primary'
+    .card.mt-3.ml-3 style="width: 40rem;"
+      .card-body
+        h2.card-title = position.title
+        = "Experience (years in this field): #{position.experience}+"
+        .mt-3
+          - if position.technologies.blank?
+            = 'Don`t need any skills'
+          - else
+            = "Technologies: #{position.technologies.map { |tech| tech.name }.join(', ')}"
+        h6.card-subtitle.mb-2.mt-3.text-muted
+          .card-text = "Опубліковано - #{position.created_at.to_date}. Відгукнулось #{position.replies}"
+        = link_to "Show more", position_path(position), class: 'btn btn-primary'
