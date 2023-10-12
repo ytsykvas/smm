@@ -8,7 +8,7 @@ class Position::CreatePosition < ServiceBase
   end
 
   def perform
-    if validate_position
+    if valid_position?
       modify_experience_param
       build_position
       save_position
@@ -20,7 +20,7 @@ class Position::CreatePosition < ServiceBase
 
   private
 
-  def validate_position
+  def valid_position?
     if @params[:title].present? && @params[:body].present?
       true
     else

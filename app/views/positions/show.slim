@@ -14,4 +14,4 @@ p.text-muted = "Опубліковано: #{@find_position.created_at.to_date}. 
           close_position_path(@find_position),
           class: 'ml-3 btn btn-danger'
 - else
-  = link_to 'відгукнутись', "#", class: 'btn btn-primary'
+  = link_to 'відгукнутись', new_candidate_path(@find_position), class: 'btn btn-primary'

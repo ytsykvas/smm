@@ -1,0 +1,9 @@
+h1 Reply to open position
+= simple_form_for @candidate do |f|
+  = f.input :name, required: true, label: "Ім'я"
+  = f.input :email, required: true, label: "Електронна пошта"
+  = f.input :phone, required: true, label: "Телефон"
+  = f.input :remotely, as: :boolean, label: "Віддалено"
+  = f.hidden_field :position_id
+
+  = f.button :submit, class: 'btn btn-primary'

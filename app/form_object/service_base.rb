@@ -10,4 +10,12 @@ class ServiceBase
   def result
     @result ||= OpenStruct.new
   end
+
+  def add_error_message(message)
+    @error_message = message
+  end
+
+  def error?
+    !@error_message.nil?
+  end
 end
