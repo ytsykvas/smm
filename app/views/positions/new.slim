@@ -1,4 +1,6 @@
-h1 = 'Create new position'
+.d-flex.justify-content-between.align-items-center.mb-3
+  h1 = 'Create new position'
+  = link_to "Назад", positions_path, class: 'btn btn-primary'
 = simple_form_for @position do |f|
   = f.input :title, required: true
   = f.input :body, as: :text, required: true

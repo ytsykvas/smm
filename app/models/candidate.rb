@@ -6,4 +6,7 @@ class Candidate < ApplicationRecord
             format: { with: /\A[\w+\-.]+@[a-z\d\-.]+\.[a-z]+\z/i, message: "невірний формат електронної пошти" }
   validates :phone, format: { with: /\A(\+380)?\d{9}\z|\A0\d{9}\z/, message: "невірний формат номеру" }
 
+  def self.per_page
+    per_page = 5
+  end
 end

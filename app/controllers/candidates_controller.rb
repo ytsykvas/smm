@@ -1,6 +1,6 @@
 class CandidatesController < ApplicationController
   def candidates
-    @candidates = find_position.candidates
+    @candidates = find_position.candidates.paginate(page: params[:page], per_page: 5)
   end
 
   def new_candidate
