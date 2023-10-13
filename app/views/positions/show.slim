@@ -4,7 +4,7 @@ h4.mt-3 = @find_position.body
   h4.mt-3 = "You need to have next skills: #{@find_position.technologies.map{|tech| tech.name}.split.join(', ')}"
 p.text-muted = "Опубліковано: #{@find_position.created_at.to_date}. Відгукнулось - #{@find_position.replies}"
 - if current_user.present? && current_user.user_type == 'admin'
-  = link_to 'Кандидати', "#",
+  = link_to 'Кандидати', all_candidates_path(@find_position),
           class: 'btn btn-primary',
           style: 'margin-right: 10px;'
   = link_to 'редагувати вакансію', edit_position_path(@find_position),

@@ -1,7 +1,11 @@
 class CandidatesController < ApplicationController
+  def candidates
+    @candidates = find_position.candidates
+  end
+
   def new_candidate
     @candidate = Candidate.new
-    @candidate.position_id = params[:id]
+    @candidate.position_id = find_position.id
   end
 
   def create
@@ -14,6 +18,10 @@ class CandidatesController < ApplicationController
   end
 
   private
+
+  def find_position
+    @find_position ||= Position.find(params[:id])
+  end
 
   def candidate_params
     params.require(:candidate).permit(:name, :phone, :email, :remotely, :position_id)
