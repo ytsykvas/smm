@@ -11,7 +11,7 @@ class CandidatesController < ApplicationController
   def create
     create_candidate = Candidate::CreateCandidate.new(params: candidate_params)
     if create_candidate.perform
-      redirect_to positions_path, notice: 'Sent reply'
+      redirect_to positions_path, notice: t('candidate.sent_reply_notice')
     else
       redirect_to new_candidate_path(candidate_params[:position_id]), notice: create_candidate.error_message.to_s
     end

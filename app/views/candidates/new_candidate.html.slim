@@ -1,10 +1,10 @@
 .d-flex.justify-content-between.align-items-center.mb-3
-  h1 Reply to open position
+  h1 = t('candidate.reply_title')
   = link_to t('usefully.back_button'), positions_path, class: 'btn btn-primary'
 = simple_form_for @candidate do |f|
-  = f.input :name, required: true, label: "Ім'я"
-  = f.input :email, required: true, label: "Електронна пошта"
-  = f.input :phone, required: true, label: "Телефон"
-  = f.input :remotely, as: :boolean, label: "Віддалено"
+  = f.input :name, required: true, label: t('candidate.name_label')
+  = f.input :email, required: true, label: t('candidate.email_label')
+  = f.input :phone, required: true, label: t('candidate.phone_label')
+  = f.input :remotely, as: :boolean, label: t('candidate.remotely_label')
   = f.hidden_field :position_id
   = f.button :submit, class: 'btn btn-primary'
