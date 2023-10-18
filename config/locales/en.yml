@@ -12,6 +12,7 @@ en:
               confirmation: " - you enter different passwords."
   usefully:
     submit_button: "Submit"
+    back_button: "Back"
   navbar:
     home: "Home"
     message: "Message"

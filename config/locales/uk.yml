@@ -12,6 +12,7 @@ uk:
               confirmation: " - ви ввели різні паролі."
   usefully:
     submit_button: "Підтвердити"
+    back_button: "Назад"
   navbar:
     home: "Головна"
     message: "Повідомлення"

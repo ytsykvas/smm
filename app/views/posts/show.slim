@@ -1,6 +1,6 @@
 .d-flex.justify-content-between.align-items-center.mb-3
   h1 = @find_post.title
-  = link_to "Назад", posts_path, class: 'btn btn-primary'
+  = link_to t('usefully.back_button'), posts_path, class: 'btn btn-primary'
 = image_tag @find_post.image.url, alt: @find_post.title if @find_post.image.attached?
 h4.mt-3 = @find_post.body
 p = "(#{@find_post.created_at.to_date})"
