@@ -3,17 +3,18 @@
   = link_to t('usefully.back_button'), positions_path, class: 'btn btn-primary'
 h4.mt-3 = @find_position.body
 - if @find_position.technologies.any?
-  h4.mt-3 = "You need to have next skills: #{@find_position.technologies.map{|tech| tech.name}.split.join(', ')}"
-p.text-muted = "Опубліковано: #{@find_position.created_at.to_date}. Відгукнулось - #{@find_position.replies}"
+  h4.mt-3 = t('positions.required_technologies',
+          technologies_list: @find_position.technologies.map{|tech| tech.name}.split.join(', '))
+p.text-muted = t('positions.statistic', date: @find_position.created_at.to_date, replies: @find_position.replies)
 - if current_user.present? && current_user.user_type == 'admin'
-  = link_to 'Кандидати', all_candidates_path(@find_position),
+  = link_to t('positions.candidates_button'), all_candidates_path(@find_position),
           class: 'btn btn-primary',
           style: 'margin-right: 10px;'
-  = link_to 'редагувати вакансію', edit_position_path(@find_position),
+  = link_to t('positions.edit_position_title'), edit_position_path(@find_position),
           class: 'btn btn-primary',
           style: 'margin-right: 10px;'
-  = link_to 'закрити вакансію',
+  = link_to t('positions.close_button'),
           close_position_path(@find_position),
           class: 'ml-3 btn btn-danger'
 - else
-  = link_to 'відгукнутись', new_candidate_path(@find_position), class: 'btn btn-primary'
+  = link_to t('positions.reply_button'), new_candidate_path(@find_position), class: 'btn btn-primary'

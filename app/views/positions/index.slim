@@ -1,21 +1,21 @@
 - if current_user.present? && current_user.user_type == 'admin'
-  = link_to "Open a new position", new_position_path, class: 'btn btn-success'
+  = link_to t('positions.open_new_position'), new_position_path, class: 'btn btn-success'
 - if @open_positions.blank?
-  h1.mt-3 = 'Sorry, we don`t have any open positions now :('
-  h4 = 'But you can set up notification and we will send an email when we will have an open position'
-  = link_to "remind me", "#", class: 'btn btn-primary'
+  h1.mt-3 = t('positions.no_opened_positions')
+  h4 = t('positions.set_up_position_notification')
+  = link_to t('positions.remind_me_button'), "#", class: 'btn btn-primary'
 - else
-  h1.mt-3 = 'We are hiring!'
+  h1.mt-3 = t('positions.we_are_hiring')
   - @open_positions.each do |position|
     .card.mt-3.ml-3 style="width: 40rem;"
       .card-body
         h2.card-title = position.title
-        = "Experience (years in this field): #{position.experience}+"
+        = t('positions.required_experience', experience: position.experience)
         .mt-3
           - if position.technologies.blank?
-            = 'Don`t need any skills'
+            = t('positions.no_skills_needed')
           - else
-            = "Technologies: #{position.technologies.map { |tech| tech.name }.join(', ')}"
+            = t('positions.required_technologies', technologies_list: position.technologies.map { |tech| tech.name }.join(', '))
         h6.card-subtitle.mb-2.mt-3.text-muted
-          .card-text = "Опубліковано - #{position.created_at.to_date}. Відгукнулось #{position.replies}"
-        = link_to "Show more", position_path(position), class: 'btn btn-primary'
+          .card-text = t('positions.statistic', date: position.created_at.to_date, replies: position.replies)
+        = link_to t('usefully.show_more'), position_path(position), class: 'btn btn-primary'

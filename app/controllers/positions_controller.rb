@@ -18,7 +18,7 @@ class PositionsController < ApplicationController
   def create
     create_position = Position::CreatePosition.new(params: position_params, user: current_user)
     if create_position.perform
-      redirect_to positions_path, notice: 'Position created successfully.'
+      redirect_to positions_path, notice: t('positions.created_position_notice')
     else
       redirect_to new_position_path, notice: create_position.error_message.to_s
     end
@@ -26,16 +26,16 @@ class PositionsController < ApplicationController
 
   def update
     if find_position.update(position_params)
-      redirect_to position_path(@find_position), notice: 'Position is updated'
+      redirect_to position_path(@find_position), notice: t('positions.updated_position_notice')
     else
-      render :edit, notice: 'Check fields'
+      render :edit, notice: t('usefully.check_fields_notice')
     end
   end
 
   def close_position
     close_position = Position::ClosePosition.new(position: find_position)
     if close_position.perform
-      redirect_to positions_path, notice: 'Position is closed'
+      redirect_to positions_path, notice: t('positions.closed_position_notice')
     else
       render :show, notice: close_position.error_message.to_s
     end
