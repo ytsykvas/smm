@@ -94,5 +94,4 @@ group :test do
   gem 'spring-commands-rspec' # MIT-License
   gem 'undercover' # MIT-License
   gem 'webmock' # MIT-License
-  gem 'rails-controller-testing'
 end
