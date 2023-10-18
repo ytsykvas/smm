@@ -1,0 +1,2 @@
+class CandidatePolicy < BasePolicy
+end
