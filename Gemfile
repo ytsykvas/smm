@@ -62,6 +62,7 @@ group :development, :test do
   gem "dotenv-rails"
   gem 'rubocop', require: false
   gem 'webdrivers', '>= 4.8.0'
+  gem 'prawn'
 end
 
 group :development do
