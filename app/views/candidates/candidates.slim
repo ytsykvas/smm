@@ -3,7 +3,10 @@
     h1 = t('candidate.index_title')
     = link_to t('usefully.back_button'), position_path(params[:id]), class: 'btn btn-primary'
   .d-flex.justify-content-center.mt-3
-    = link_to t('candidate.export_pdf'), "#", class: 'btn btn-warning', style: 'margin-right: 10px;'
+    = link_to t('candidate.export_pdf'),
+            export_pdf_candidates_path(format: :pdf),
+            class: 'btn btn-warning',
+            style: 'margin-right: 10px;'
     = link_to t('candidate.export_xml'), "#", class: 'btn btn-warning', style: 'margin-right: 10px;'
     = link_to t('usefully.print'), "#", class: 'btn btn-warning'
   - @candidates.each do |candidate|
