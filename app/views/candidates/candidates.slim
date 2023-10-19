@@ -12,8 +12,9 @@
         h2.card-title = candidate.name
         h4 = t('candidate.email', email: candidate.email)
         h4 = t('candidate.phone', phone: candidate.phone)
-      = link_to t('candidate.add_notice_button'), "#", class: 'btn btn-primary'
-      = link_to t('candidate.refuse_button'), "#", class: 'btn btn-secondary'
-      = link_to t('candidate.hired_button'), "#", class: 'btn btn-success'
+      .d-flex.justify-content-between.mt-3
+        = link_to t('candidate.hired_button'), "#", class: 'btn btn-success'
+        = link_to t('candidate.add_notice_button'), "#", class: 'btn btn-primary'
+        = link_to t('candidate.refuse_button'), "#", class: 'btn btn-secondary'
   .pagination-centered
     = will_paginate @collection, renderer: BootstrapPagination::Rails
