@@ -18,14 +18,13 @@ class CandidatesController < ApplicationController
   end
 
   def export_pdf
-    @candidates = position_candidates
-    pdf_service = Candidate::ExportPdf.new(@candidates)
-    respond_to do |format|
-      format.pdf do
-        pdf_data = pdf_service.generate_pdf
-        send_data pdf_data, filename: "candidates.pdf", type: "application/pdf"
-      end
-    end
+    pdf_service = Candidate::ExportPdf.new(position_candidates)
+    send_data pdf_service.generate_pdf, filename: "candidates.pdf", type: "application/pdf"
+  end
+
+  def export_excel
+    excel_generator = Candidate::ExportExcel.new(position_candidates)
+    send_file excel_generator.generate_excel, type: "application/vnd.ms-excel", filename: "candidates_export.xls"
   end
 
   private
@@ -39,6 +38,6 @@ class CandidatesController < ApplicationController
   end
 
   def position_candidates
-    find_position.candidates
+    @position_candidates ||= find_position.candidates
   end
 end

@@ -9,4 +9,8 @@ class Candidate < ApplicationRecord
   def self.per_page
     per_page = 5
   end
+
+  def remotely?
+    remotely == true
+  end
 end

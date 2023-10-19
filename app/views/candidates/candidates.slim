@@ -7,8 +7,7 @@
             export_pdf_candidates_path(format: :pdf),
             class: 'btn btn-warning',
             style: 'margin-right: 10px;'
-    = link_to t('candidate.export_xml'), "#", class: 'btn btn-warning', style: 'margin-right: 10px;'
-    = link_to t('usefully.print'), "#", class: 'btn btn-warning'
+    = link_to t('candidate.export_xml'), export_excel_candidates_path, class: 'btn btn-warning'
   - @candidates.each do |candidate|
     .card.mt-5.ml-5 style="width: 100%;"
       .card-body
