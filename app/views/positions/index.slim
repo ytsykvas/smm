@@ -19,3 +19,5 @@
         h6.card-subtitle.mb-2.mt-3.text-muted
           .card-text = t('positions.statistic', date: position.created_at.to_date, replies: position.replies)
         = link_to t('usefully.show_more'), position_path(position), class: 'btn btn-primary'
+  .pagination-centered
+    = will_paginate @open_positions, renderer: BootstrapPagination::Rails

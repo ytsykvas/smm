@@ -1,6 +1,6 @@
 class PositionsController < ApplicationController
   def index
-    @open_positions = Position.where(status: 'open')
+    @open_positions = Position.where(status: 'open').paginate(page: params[:page], per_page: 10)
   end
 
   def show

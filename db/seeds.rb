@@ -28,4 +28,12 @@ Social.create!([
                  { name: 'Tik-Tok' },
                  { name: 'Tweeter' }
                ])
+Technology.create!([
+                    {name: 'Ruby'},
+                    {name: 'JavaScript'},
+                    {name: 'Targeting'},
+                    {name: 'Marketing'},
+                    {name: 'Canva'},
+                    {name: 'Figma'}
+                   ])
 puts '______Seeded______'

@@ -35,7 +35,10 @@ Then (/(After waiting max (\d*) seconds )?I (should see|should not see) the text
     'employee my team': 'navbar.employee.my_team',
     'employee my tasks': 'navbar.employee.my_tasks',
     'ask question': 'navbar.regular.question',
-    'calculate': 'navbar.regular.calculate'
+    'calculate': 'navbar.regular.calculate',
+    # positions
+    'no opened positions': 'positions.no_opened_positions',
+    'create new position': 'positions.open_new_position'
   }.stringify_keys
   text = I18n.t(hash_of_i18n_keys.fetch(key))
   wait ||= Capybara.default_max_wait_time
@@ -46,6 +49,14 @@ Then (/(After waiting max (\d*) seconds )?I (should see|should not see) the text
   end
 end
 
-Then ('I confirm alert') do
+Then('I confirm alert') do
   page.driver.browser.switch_to.alert.accept
+end
+
+Then(/^I (should|should not) see pagination$/) do |should_or_not|
+  if should_or_not == 'should'
+    expect(page).to have_selector('.pagination')
+  else
+    expect(page).not_to have_selector('.pagination')
+  end
 end

@@ -1,9 +1,11 @@
-When(/I visit (sign up|log in) page/) do |page|
+When(/I visit (.*?) page/) do |page|
   path = case page
          when 'sign up'
            new_user_registration_path
          when 'log in'
            new_user_session_path
+         when 'positions'
+           positions_path
          end
   visit path
 end

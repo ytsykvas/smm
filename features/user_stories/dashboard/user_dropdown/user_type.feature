@@ -1,10 +1,7 @@
 Feature: Different user types have different user dropdowns
 
   Scenario: Admin user
-    Given We have a user. It is admin
-    When I visit log in page
-    And The last user fill his email and password
-    And I click submit
+    Given We have a logged in user. It is admin
     Then I should see the text: agency
     And I should see the text: partners
     And I should see the text: services
@@ -21,10 +18,7 @@ Feature: Different user types have different user dropdowns
     And I should see the text: log out
 
   Scenario: Manager user
-    Given We have a user. It is manager
-    When I visit log in page
-    And The last user fill his email and password
-    And I click submit
+    Given We have a logged in user. It is manager
     Then I should see the text: agency
     And I should see the text: partners
     And I should see the text: services
@@ -41,10 +35,7 @@ Feature: Different user types have different user dropdowns
     And I should see the text: log out
 
   Scenario: Employee user
-    Given We have a user. It is employee
-    When I visit log in page
-    And The last user fill his email and password
-    And I click submit
+    Given We have a logged in user. It is employee
     Then I should see the text: agency
     And I should see the text: partners
     And I should see the text: services
@@ -61,10 +52,7 @@ Feature: Different user types have different user dropdowns
     And I should see the text: log out
 
   Scenario: Regular user
-    Given We have a user. It is regular
-    When I visit log in page
-    And The last user fill his email and password
-    And I click submit
+    Given We have a logged in user. It is regular
     Then I should see the text: agency
     And I should see the text: partners
     And I should see the text: services
