@@ -1,5 +1,5 @@
 - if current_user.present? && current_user.user_type == 'admin'
-  = link_to t('positions.open_new_position'), new_position_path, class: 'btn btn-success'
+  = link_to t('positions.open_new_position'), new_position_path, class: 'btn btn-success', data: { test_id: 'create_position_btn' }
 - if @open_positions.blank?
   h1.mt-3 = t('positions.no_opened_positions')
   h4 = t('positions.set_up_position_notification')

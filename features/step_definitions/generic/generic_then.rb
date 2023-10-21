@@ -38,7 +38,9 @@ Then (/(After waiting max (\d*) seconds )?I (should see|should not see) the text
     'calculate': 'navbar.regular.calculate',
     # positions
     'no opened positions': 'positions.no_opened_positions',
-    'create new position': 'positions.open_new_position'
+    'create position title': 'positions.create_position_title',
+    'create new position': 'positions.open_new_position',
+    'position is created': 'positions.created_position_notice'
   }.stringify_keys
   text = I18n.t(hash_of_i18n_keys.fetch(key))
   wait ||= Capybara.default_max_wait_time
@@ -47,6 +49,10 @@ Then (/(After waiting max (\d*) seconds )?I (should see|should not see) the text
   else
     expect(page).to_not have_content text, wait: wait.to_i
   end
+end
+
+Then(/^I see text: (.+)/) do |text|
+  expect(page).to have_text(text)
 end
 
 Then('I confirm alert') do
