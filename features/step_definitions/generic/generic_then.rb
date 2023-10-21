@@ -40,7 +40,9 @@ Then (/(After waiting max (\d*) seconds )?I (should see|should not see) the text
     'no opened positions': 'positions.no_opened_positions',
     'create position title': 'positions.create_position_title',
     'create new position': 'positions.open_new_position',
-    'position is created': 'positions.created_position_notice'
+    'position is created': 'positions.created_position_notice',
+    'edit position title': 'positions.edit_position_title',
+    'updated position notice': 'positions.updated_position_notice'
   }.stringify_keys
   text = I18n.t(hash_of_i18n_keys.fetch(key))
   wait ||= Capybara.default_max_wait_time

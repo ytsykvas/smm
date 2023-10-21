@@ -8,6 +8,8 @@ When(/I visit (.*?) page/) do |page|
            positions_path
          when 'new position'
            new_position_path
+         when 'edit position'
+           edit_position_path
          end
   visit path
 end
@@ -37,7 +39,12 @@ When (/I click on the (.*?) (link|button)/) do |test_id, type|
     # dashboard
     'avatar': 'avatar_picture',
     'sign out': 'log_out_button',
-    'create position': 'create_position_btn'
+    # position
+    'create position': 'create_position_btn',
+    'edit position': 'edit_position_btn',
+    # candidate
+    'show candidates': 'show_candidates_btn',
+    'show position': 'show_position_btn'
   }.stringify_keys
   object = case type
            when "link"

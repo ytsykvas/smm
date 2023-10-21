@@ -2,12 +2,12 @@
   h1 = t('positions.edit_position_title')
   = link_to t('usefully.back_button'), position_path(params[:id]), class: 'btn btn-primary'
 = simple_form_for @find_position do |f|
-  = f.input :title, required: true
-  = f.input :body, as: :text, required: true
-  = f.input :experience, required: true
+  = f.input :title, required: true, input_html: { 'data-test-id': 'title_field' }
+  = f.input :body, as: :text, required: true, input_html: { 'data-test-id': 'body_field' }
+  = f.input :experience, required: true, input_html: { 'data-test-id': 'experience_field' }
   = f.collection_check_boxes :technology_ids, Technology.all, :id, :name, include_hidden: false do |tech|
     .form-check.form-check-inline
       = tech.check_box(class: "form-check-input")
-      = tech.label(class: "form-check-label") { tech.text }
-  .mt-3
+      = tech.label(class: "form-check-label", 'data-test-id': "technology_#{tech.object.id}") { tech.text }
+    .mt-3
   = f.button :submit, class: 'btn btn-primary'
